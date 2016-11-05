@@ -4,9 +4,9 @@ services:
   builder:
     build: .
     volumes:
-     - /Volumes/Discone/dbpedia/models:/opt/models
-     - /Volumes/Discone/dbpedia/wdir:/opt/wdir
-     - /Volumes/Discone/dbpedia/data:/opt/data
+     - ~/dbpedia/models:/opt/models
+     - ~/dbpedia/wdir:/opt/wdir
+     - ~/dbpedia/data:/opt/data
     command: ./index_db.sh wdir it_IT it/stopwords.list Italian models/it
 
 
