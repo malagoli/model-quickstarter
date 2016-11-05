@@ -1,11 +1,11 @@
 #!/bin/bash
 
-wget --no-check-certificate -q https://raw.github.com/dbpedia-spotlight/dbpedia-spotlight/master/bin/index_db.sh
-chmod +x index_db.sh
+#wget --no-check-certificate -q https://raw.github.com/dbpedia-spotlight/dbpedia-spotlight/master/bin/index_db.sh
+#chmod +x index_db.sh
 
-mkdir wdir
-mkdir models
-mkdir data
+#mkdir wdir
+#mkdir models
+#mkdir data
 
 mvn_version=`mvn -version | grep "Apache Maven" | sed -r "s/Apache Maven (\S+).*/\1/"`
 if [[ "$mvn_version" > "3.0.0" ]]; then

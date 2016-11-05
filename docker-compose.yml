@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  builder:
+    build: .
+    volumes:
+     - /Volumes/Discone/dbpedia/models:/opt/models
+     - /Volumes/Discone/dbpedia/wdir:/opt/wdir
+     - /Volumes/Discone/dbpedia/data:/opt/data
+    command: ./index_db.sh wdir it_IT it/stopwords.list Italian models/it
+
+
+# $1 Working directory
+# $2 Locale (en_US)
+# $3 Stopwords file
+# $4 Analyzer+Stemmer language prefix e.g. Dutch
+# $5 Model target folder
